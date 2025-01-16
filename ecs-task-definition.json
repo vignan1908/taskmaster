@@ -1,0 +1,23 @@
+{
+    "family": "taskmaster-task",
+    "executionRoleArn": "arn:aws:ecs:ap-south-1:381492075629:cluster/taskmaster-cluster",
+    "containerDefinitions": [
+      {
+        "name": "taskmaster",
+        "image": "381492075629.dkr.ecr.ap-south-1.amazonaws.com/taskmaster:latest",
+        "memory": 512,
+        "cpu": 256,
+        "portMappings": [
+          {
+            "containerPort": 8080,
+            "hostPort": 8080
+          }
+        ]
+      }
+    ],
+    "requiresCompatibilities": ["FARGATE"],
+    "networkMode": "awsvpc",
+    "cpu": "256",
+    "memory": "512"
+  }
+  

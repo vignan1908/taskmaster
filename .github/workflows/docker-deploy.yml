@@ -3,8 +3,10 @@ name: CI/CD Pipeline for Taskmaster
 on:
   push:
     branches:
-      - main
-
+      - branch1
+  pull_request:
+    branches:
+      -branch1
 jobs:
   build:
     runs-on: ubuntu-latest
